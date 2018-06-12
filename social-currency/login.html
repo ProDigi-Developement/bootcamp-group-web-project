@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bruno Santos | login users</title>
+        <meta charset="utf-8">
+    </head>
+
+    <!-- BODY -->
+    <body>
+        <br/><button id="login">Login user</button>
+        <br/><button id="logout">Logout user</button>
+    </body>
+
+    <!-- SCRIPTS -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <!-- Add additional services you want to use -->
+<!--    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>-->
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDPVlrenGYFaqRDIhipmTxeP6TKWdpPn5M",
+        authDomain: "my-currency-community.firebaseapp.com",
+        databaseURL: "https://my-currency-community.firebaseio.com",
+        projectId: "my-currency-community",
+        storageBucket: "my-currency-community.appspot.com",
+        messagingSenderId: "539261265518"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/login.js"></script>
+</html>
