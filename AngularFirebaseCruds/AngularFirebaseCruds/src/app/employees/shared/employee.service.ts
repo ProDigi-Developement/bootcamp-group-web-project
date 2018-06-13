@@ -18,7 +18,7 @@ export class EmployeeService {
   insertEmployee(employee:Employee){ 
     this.employeeList.push({ 
       name:employee.name,
-      position:employee.salary,
+      position:employee.position,
       office:employee.office,
       salary:employee.salary,
     });
@@ -27,7 +27,7 @@ export class EmployeeService {
   updateEmployee(employee:Employee){ 
     this.employeeList.update(employee.$key,{ 
       name:employee.name,
-      position:employee.salary,
+      position:employee.position,
       office:employee.office,
       salary:employee.salary,
     });
