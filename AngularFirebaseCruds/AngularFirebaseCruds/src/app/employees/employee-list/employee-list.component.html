@@ -1,3 +1,11 @@
-<p>
-  employee-list works!
-</p>
+<h6 class="text-center">Employee List</h6>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let employee of employeeList">
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.position}}</td>
+    <td>
+      <a class="btn">Edit</a>
+      <a class="btn">Delete</a>
+    </td>
+  </tr>
+</table>
