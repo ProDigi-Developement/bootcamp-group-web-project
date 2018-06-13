@@ -4,8 +4,10 @@
     <td>{{ employee.name }}</td>
     <td>{{ employee.position}}</td>
     <td>
-      <a class="btn">Edit</a>
-      <a class="btn">Delete</a>
+      <a class="btn" (click)="OnEdit(employee)" >Edit</a>
+    </td>
+    <td>
+        <a class="btn" (click)="OnDelete(employee.$key)">Delete</a>
     </td>
   </tr>
 </table>

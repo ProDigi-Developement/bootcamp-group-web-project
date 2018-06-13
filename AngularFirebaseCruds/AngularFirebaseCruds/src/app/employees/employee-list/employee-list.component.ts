@@ -18,11 +18,19 @@ export class EmployeeListComponent implements OnInit {
       this.employeeList = [];
       item.forEach(element=>{
         var y = element.payload.toJSON();
-        y["key"] = element.key;
+        y["$key"] = element.key;
         this.employeeList.push(y as Employee);
       });
     });
   }
 
+  OnEdit(emp:Employee){
+   this.employeeService.selectedEmployee = Object.assign({ },emp);
+  }
+
+  OnDelete(key:string){
+    console.log("key",key);
+    this.employeeService.deleteEmployee(key);
+   }
 
 }

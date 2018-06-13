@@ -7,7 +7,7 @@ import { Employee } from './employee.model';
 })
 export class EmployeeService {
   employeeList:AngularFireList<any>;
-  selectedEmployee:Employee=new Employee();
+  selectedEmployee:Employee;
   constructor(private firebase:AngularFireDatabase) { }
 
   getData(){
@@ -15,7 +15,7 @@ export class EmployeeService {
     return this.employeeList;
   }
 
-  insertEmployee(employee:Employee){ 
+  insertEmployee(employee:Employee){
     this.employeeList.push({ 
       name:employee.name,
       position:employee.position,

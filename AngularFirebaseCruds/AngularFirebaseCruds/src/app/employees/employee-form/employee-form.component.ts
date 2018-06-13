@@ -16,7 +16,11 @@ export class EmployeeFormComponent implements OnInit {
     this.resetForm();
   }
   onSubmit(employeeForm:NgForm){
-    this.employeeService.insertEmployee(employeeForm.value);
+    console.log(employeeForm.value.$key);
+    if(employeeForm.value.$key==null)
+      this.employeeService.insertEmployee(employeeForm.value);
+    else
+      this.employeeService.updateEmployee(employeeForm.value);
     this.resetForm(employeeForm);    
   }
 
