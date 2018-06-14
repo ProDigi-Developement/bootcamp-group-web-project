@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../shared/employee.service';
 import { Employee } from '../shared/employee.model';
 import { element } from 'protractor';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-employee-list',
@@ -10,7 +11,7 @@ import { element } from 'protractor';
 })
 export class EmployeeListComponent implements OnInit {
  employeeList:Employee[];
-  constructor(private employeeService:EmployeeService) { }
+  constructor(private employeeService:EmployeeService,private toastr:ToastrService) { }
 
   ngOnInit() {
     var x = this.employeeService.getData();
@@ -31,6 +32,8 @@ export class EmployeeListComponent implements OnInit {
   OnDelete(key:string){
     console.log("key",key);
     this.employeeService.deleteEmployee(key);
+    this.toastr.warning("Employee Deleted Successfully");
+
    }
 
 }
