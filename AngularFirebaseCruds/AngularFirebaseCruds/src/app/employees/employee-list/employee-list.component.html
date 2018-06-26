@@ -4,10 +4,10 @@
     <td>{{ employee.name }}</td>
     <td>{{ employee.position}}</td>
     <td>
-      <a class="btn" (click)="OnEdit(employee)" >Edit</a>
+      <a class="btn btn-success" style="color: azure" (click)="OnEdit(employee)" >Edit</a>
     </td>
     <td>
-        <a class="btn" (click)="OnDelete(employee.$key)">Delete</a>
+        <a class="btn btn-danger" style="color: azure" (click)="OnDelete(employee.$key)">Delete</a>
     </td>
   </tr>
 </table>

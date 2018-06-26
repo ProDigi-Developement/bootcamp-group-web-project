@@ -17,7 +17,7 @@ export class EmployeeFormComponent implements OnInit {
     this.resetForm();
   }
   onSubmit(employeeForm:NgForm){
-    console.log(employeeForm.value.$key);
+    if(employeeForm.valid){
     if(employeeForm.value.$key==null){
       this.employeeService.insertEmployee(employeeForm.value);
       this.toastr.success("Submitted Successfully","Employee Registerd");
@@ -27,7 +27,11 @@ export class EmployeeFormComponent implements OnInit {
       this.employeeService.updateEmployee(employeeForm.value);
       this.toastr.success("Edited Successfully","Employee Edited.");
     } 
-    this.resetForm(employeeForm);    
+    this.resetForm(employeeForm); 
+  }
+  else{
+    this.toastr.warning("Failed","Please Provide All Required Information.");
+  }   
   }
 
   resetForm(employeeForm?:NgForm){
