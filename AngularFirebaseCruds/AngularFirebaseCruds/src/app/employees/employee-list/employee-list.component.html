@@ -1,0 +1,13 @@
+<h6 class="text-center">Employee List</h6>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let employee of employeeList">
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.position}}</td>
+    <td>
+      <a class="btn btn-success" style="color: azure" (click)="OnEdit(employee)" >Edit</a>
+    </td>
+    <td>
+        <a class="btn btn-danger" style="color: azure" (click)="OnDelete(employee.$key)">Delete</a>
+    </td>
+  </tr>
+</table>
