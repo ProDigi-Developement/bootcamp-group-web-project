@@ -1,0 +1,17 @@
+<% include partials/header %>
+<h1> hello there </h1>
+<% data["Search"].forEach(function(movie){ %>
+<div class="container">
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=" <%=movie.Poster%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"> <%=movie.Title%></h5>
+          <p class="card-text"><em>Released in<%=movie.Year%> </em></p>
+
+        </div>
+    </div>
+</div>
+<%});%>
+
+<% include partials/footer %>
