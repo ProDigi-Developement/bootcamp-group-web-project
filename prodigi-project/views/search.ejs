@@ -1,0 +1,17 @@
+<% include partials/header %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Search any Movie</h1>
+    <p>type the name of the movie in the search bar and it will display 10 matching results based on input </p>
+  </div>
+
+<div class="form-group">
+<form action="/results" method="GET">
+
+  <input type="text" class="form-control" name="search" placeholder="type movie name to search" ><br>
+
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+</div>
+</div>
+<% include partials/footer %>
