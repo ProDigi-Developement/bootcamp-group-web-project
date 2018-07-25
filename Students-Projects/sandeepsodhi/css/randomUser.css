@@ -1,46 +1,63 @@
-body {
-    min-height: 75rem;
-}
-.navbar {
-    margin-bottom: 0;
-}
-
 .bg-dark {
     background-color: #343a40!important;
 }
 
-.jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    margin-bottom: 0;
-    background-color: #fff;
+.src-image {
+  display: none;
 }
 
-.jumbotron p:last-child {
-    margin-bottom: 0;
+.navbar-brand{
+  color:white;
 }
 
-.jumbotron-heading {
-    font-weight: 300;
+.border{
+    width: 40%;
+    margin-left: 30%;
+ }
+
+img {
+    border: 0;
+    border-radius: 30%;
 }
 
-.jumbotron .container {
-    max-width: 40rem;
+.card p {
+    color: white;
+    text-transform: capitalize;
 }
 
-.area {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-color: #f7f7f7;
+.card .header-bg {
+  /* This stretches the canvas across the entire hero unit */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px #FFF solid;
+  /* This positions the canvas under the text */
+  z-index: 1;
+}
+.card .avatar {
+  position: relative;
+  margin-top: 15px;
+  z-index: 100;
 }
 
-footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+.text
+{
+  background-color: #333;
+  color: white;
+  border-radius: 20%;
+  width: 60%;
+  margin-left: 20%;
 }
 
-footer p {
-    margin-bottom: .25rem;
+.card .avatar img {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid rgba(0,0,30,0.8);
 }
 
 .float-right {

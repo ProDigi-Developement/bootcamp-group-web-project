@@ -12,10 +12,9 @@ function search(){
             "success": function(data) {
                 $.each(data.results, function (index, client) {
                     $cardItem = "<div class='col-sm-3' >";
-                    $cardItem +=    "<div class='card'>";
-                    $cardItem +=        "<canvas class='header-bg' width='250' height='70' id='header-blur'></canvas>";
-                    $cardItem +=        "<div class='avatar'><img src='" + client.picture.large  + "'></div>";
-                    $cardItem +=        "<div class='content'><p>" + client.name.first + ' ' + client.name.last + "</p></div>";
+                    $cardItem +=    "<div>";
+                    $cardItem +=        "<div class='border'><img src='" + client.picture.large  + "'></div>";
+                    $cardItem +=        "<div><p class = 'text'>" + client.name.first + ' ' + client.name.last + "</p></div>";
                     $cardItem +=    "</div>";
                     $cardItem += "</div>";
                     $('#row').append($cardItem);
