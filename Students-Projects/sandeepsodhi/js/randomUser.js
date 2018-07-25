@@ -5,6 +5,7 @@ function search(){
     var nPerson = $("#nPersons").val();
     var gender = $("#gender").val();
     $("#data").show();
+    $("#row").empty();
     $.ajax({
         "url": "https://randomuser.me/api?results="+nPerson+"&gender="+gender,
             "dataType": "json",
