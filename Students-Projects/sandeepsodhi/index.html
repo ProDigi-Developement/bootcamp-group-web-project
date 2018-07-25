@@ -27,10 +27,19 @@
     </header>
     <main role="main">
         <div class="row" style="margin-left: 0.5%">
-        <!-- selection code -->
+            <p class="navbar-brand" style="color:grey">Select gender to generate a users:</p>
+            <select name="gender" id="gender" class="form-control" style="width:40%;margin-top:.5%" form="carform">
+                <option value="All">All</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
         </div>
-        <!-- for adding the button -->
-        <section id="data" class=" text-center" hidden="true">
+        <div class="row" style="margin-left: 0.5%">
+            <p class="navbar-brand" style="color:grey">Enter the number of user to generate:</p>
+            <input type="text" class="form-control" id="nPersons" value="5" style="width:40%;margin-top: .5%">
+        </div>
+        <input class="btn btn-primary" type="button" id="search" value="Submit" onclick="search()" style="margin-left: 1%">
+        <section id="data" class=" text-center" hidden="true" style="display: block;">
             <h2>Users</h2>
             <div>
                 <div id="row" class="row">
